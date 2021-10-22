@@ -15,4 +15,4 @@
 - [ ] Are all your unit tests isolated?
 
 
-Once you can say yes to these questions, submit your PR for [review](https://airtable.com/shr74iTry6AtQkHRQ)
+Once you can say yes to these questions, submit your PR for review
