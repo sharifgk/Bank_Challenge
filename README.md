@@ -38,4 +38,4 @@ date       || credit  || debit  || balance
 - [ ] Encapsulates Transaction data in a class
 
 #### Extended
-- [ ] See a coach!
+- [ ] Can you format the console output?  Credited values should be GREEN and debited values should be RED.  The balance should be GREEN if positive and RED if negative
