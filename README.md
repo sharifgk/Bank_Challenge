@@ -32,7 +32,7 @@ date       || credit  || debit  || balance
 #### Standard
 - [ ] Meets the spec
 - [ ] Developed test-first
-- [ ] Passes tests and code is linted
+- [ ] Passes tests and code is clean and well formatted
 - [ ] Encapsulates adding and storing Transactions in a class
 - [ ] Encapsulates Statement formatting in a class
 - [ ] Encapsulates Transaction data in a class
