@@ -2,11 +2,11 @@ class TransactionDB {
 
     constructor() {
         this.transactions = [];
-        this.balance = 0;
+
     }
 
-    addTransaction(date, type, amount, balance) {
-        this.transactions.push({ date, type, amount, balance });
+    addTransaction(type, amount, date) {
+        this.transactions.push({ type, amount, date });
     }
 
     getTransactions() {

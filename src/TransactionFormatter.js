@@ -1,19 +1,14 @@
 class TransactionFormatter {
 
     format(transactions) {
-        return transactions.map(({ date, type, amount, balance }) =>
-        ({
-            date: this.formatDate(date),
-            credit: type === `deposit` ? amount : ``,
-            debit: type === `withdraw` ? amount : ``,
-            balance: balance
-        }));
+        let balance = 0;
+        return transactions.map(({ type, amount, date }) => {
+            balance += type === "deposit" ? amount : -amount;
+            return { date, type, amount, balance };
+        });
+
     }
 
-    formatDate(date) {
-        const [day, month, year] = date.split(`-`);
-        return `${day}/${month}/${year}`;
-    }
 
 
 

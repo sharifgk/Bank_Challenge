@@ -6,11 +6,11 @@ class Banker {
     }
 
     deposit(amount, date) {
-        this.transactionDB.addTransaction(date, "deposit", amount, this.transactionDB.balance + amount);
+        this.transactionDB.addTransaction("deposit", amount, date);
     }
 
     withdraw(amount, date) {
-        this.transactionDB.addTransaction(date, "withdraw", amount, this.transactionDB.balance - amount);
+        this.transactionDB.addTransaction("withdraw", amount, date);
     }
 
     printStatement() {
