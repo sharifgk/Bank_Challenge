@@ -1,10 +1,10 @@
+# Installation
 
-
-
-
-
-
-
+* Clone the repo to your local machine using `git clone https://github.com/sharifgk/bank-challenge.git`
+* In the terminal `cd` into the project directory.
+* Run `npm install` to install the dependencies.
+* To check the tests use `npm test`.
+* To check the output of the index file use `node index.js`.
 
 
 
