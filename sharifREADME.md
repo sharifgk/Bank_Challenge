@@ -1,3 +1,17 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Domain Model
 
 | Objects              | Properties           | Functions                                          | Outputs            |

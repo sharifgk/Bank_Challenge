@@ -8,9 +8,9 @@ describe("TransactionFormatter tests", () => {
     });
 
     describe('format', () => {
-        it('should format the transactions correctly', () => {
+        it('should format the transactions correctly (reverse order)', () => {
             const transactions = [{ type: 'deposit', amount: 1000, date: '01-01-2000' }, { type: 'withdraw', amount: 500, date: '02-01-2000' },];
-            const expectedResult = [{ date: '01/01/2000', type: 'deposit', amount: 1000, balance: 1000 }, { date: '02/01/2000', type: 'withdraw', amount: 500, balance: 500 },];
+            const expectedResult = [{ date: '02/01/2000', type: 'withdraw', amount: 500, balance: 500 }, { date: '01/01/2000', type: 'deposit', amount: 1000, balance: 1000 }];
             expect(testTranForm.format(transactions)).toEqual(expectedResult);
         });
     });
