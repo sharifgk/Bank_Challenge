@@ -1,27 +1,27 @@
 import TransactionFormatter from "../src/TransactionFormatter.js";
 
-xdescribe("TransactionFormatter tests", () => {
+describe("TransactionFormatter tests", () => {
     let testTranForm;
 
     beforeEach(() => {
         testTranForm = new TransactionFormatter;
     });
 
-    describe('format function', () => {
-        it('should format transactions correctly', () => {
-            const transactions = [{ date: `01-01-2000`, type: `deposit`, amount: 1000, balance: 1000 }];
+    describe('format', () => {
+        it('should format the transactions correctly', () => {
+            const transactions = [{ type: 'deposit', amount: 1000, date: '01-01-2000' }, { type: 'withdraw', amount: 500, date: '02-01-2000' },];
+            const expectedResult = [{ date: '01/01/2000', type: 'deposit', amount: 1000, balance: 1000 }, { date: '02/01/2000', type: 'withdraw', amount: 500, balance: 500 },];
+            expect(testTranForm.format(transactions)).toEqual(expectedResult);
+        });
+    });
 
-            const expected = [{ date: `01/01/2000`, credit: 1000, debit: ``, balance: 1000 }];
-
-            expect(testTranForm.format(transactions)).toEqual(expected);
-        })
-    })
-
-    describe(`testing formatDate function`, () => {
-        it('should correctly format date to acceptance criteria format', () => {
-            expect(testTranForm.formatDate(`01-01-2000`)).toEqual(`01/01/2000`);
-        })
-    })
+    describe('formatDate', () => {
+        it('should format the date correctly', () => {
+            const date = '01-01-2022';
+            const expectedResult = '01/01/2022';
+            expect(testTranForm.formatDate(date)).toEqual(expectedResult);
+        });
+    });
 
 
 })
