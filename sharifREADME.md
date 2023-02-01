@@ -1,11 +1,14 @@
 # Domain Model
 
-| Objects | Properties                | Messages          | Outputs |
-| ------- | ------------------------- | ----------------- | ------- |
-| Account | transactions@array        |deposit(amount:int, date:string)|         |
-|         | balance@int               |withdraw(amount:int, date:string)|         |
-|         |                           |printStatement()   |         |
-|Transaction|date@string              |                   |         |
-|         |amount@int                 |                   |         |
-|         |balance@int                |                   |         |
-|Statement| | printer(transactions@array)
+| Objects              | Properties           | Functions                                          | Outputs            |
+|----------------------|----------------------|----------------------------------------------------|--------------------|
+| Banker               | transactionDB        | deposit(amount,date)                               |                    | 
+|                      | transactionFormatter | withdraw(amount,date)                              |                    | 
+|                      | printer              | printStatement()                                   | @string            |  
+|                      |                      |                                                    |                    |  
+| TransactionDB        | transactions@array   | addTransaction(type@string,amount@int,date@string) |                    |  
+|                      |                      | getTransactions()                                  | transactions@array | 
+|                      |                      |                                                    |                    | 
+| TransactionFormatter |                      | format(transactions@array)                         | @array             |   
+|                      |                      | formatDate(date)                                   | date@string        | 
+| Printer              |                      | print(formattedTransactions@array)                 | @void
