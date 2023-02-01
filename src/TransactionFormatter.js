@@ -5,7 +5,7 @@ class TransactionFormatter {
         return transactions.map(({ type, amount, date }) => {
             balance += type === "deposit" ? amount : -amount;
             return { date: this.formatDate(date), type, amount, balance };
-        });
+        }).reverse();
 
     }
 
